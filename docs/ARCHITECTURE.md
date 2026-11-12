@@ -4,11 +4,14 @@ Find a skewed Spark task from stage timing summaries.
 
 ```mermaid
 flowchart LR
-    N0["example.json"]
-    N1["agent.py"]
-    N2["Compare task duration against the stage median to find skew."]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Spark task duration export"]
+    B["Calculate stage median"]
+    C{"Task meets configured skew ratio?"}
+    D["Report task index"]
+    E["Return median with no matching index"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
 ```
 
 ## Operational boundaries

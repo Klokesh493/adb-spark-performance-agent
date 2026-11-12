@@ -14,4 +14,16 @@ Run `make verify` with Make and Python 3 installed. The sample runs through the 
 
 ## Project walkthrough
 
+```mermaid
+flowchart LR
+    A["Spark task duration export"]
+    B["Calculate stage median"]
+    C{"Task meets configured skew ratio?"}
+    D["Report task index"]
+    E["Return median with no matching index"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
+```
+
 [Architecture and data flow](docs/ARCHITECTURE.md) · [Business problem, demo, and verification](docs/CASE_STUDY.md)
