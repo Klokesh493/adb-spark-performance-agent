@@ -12,6 +12,10 @@ This offline prototype reads synthetic input and returns a recommendation or dia
 
 Run `make verify` with Make and Python 3 installed. The sample runs through the CLI and its JSON is compared with `expected.json`.
 
+## Business problem
+
+A small number of slow Spark tasks can delay a stage even when its average runtime looks acceptable.
+
 ## Project walkthrough
 
 ```mermaid

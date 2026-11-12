@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Find a skewed Spark task from stage timing summaries.
+A small number of slow Spark tasks can delay a stage even when its average runtime looks acceptable.
 
 ## Reproduce the workflow
 
